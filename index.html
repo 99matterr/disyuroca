@@ -47,7 +47,7 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem 2rem 0 2rem; /* Balanced wrapper area */
+            padding: 1rem 2rem 0 2rem;
             display: flex;
             flex-direction: column;
             gap: 0.5rem; 
@@ -75,13 +75,13 @@
             object-fit: contain;
         }
 
-        /* Utility Icons Layout - Fixed visual alignment correction */
+        /* Utility Icons Layout */
         .nav-utilities {
             display: flex;
             align-items: center;
             gap: 1.5rem;
             color: #4b5563;
-            transform: translateY(5px); /* Perfectly drops icons to match the visual centerline of the logo text */
+            transform: translateY(5px);
         }
 
         .nav-icon-btn {
@@ -105,26 +105,25 @@
             gap: 2.2rem;
             list-style: none;
             width: 100%;
-            justify-content: center; /* Centered Navigation Links */
+            justify-content: center;
         }
 
         .nav-links li {
-            position: relative; /* Anchor target for the underline animation line */
+            position: relative;
         }
 
         .nav-links a {
             text-decoration: none;
             color: #4b5563;
-            font-weight: 600;    /* Increased structural weight */
+            font-weight: 600;
             transition: var(--transition);
             font-size: 0.98rem;
             cursor: pointer;
             display: inline-block;
-            padding: 0.5rem 0 0.75rem 0; /* Creates an invisible interactive zone */
+            padding: 0.5rem 0 0.75rem 0;
             letter-spacing: 0.01em;
         }
 
-        /* Premium interactive border accent line geometry */
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -143,17 +142,17 @@
 
         .nav-links a:hover::after, 
         .nav-links a.active::after {
-            width: 100%; /* Smooth horizontal reveal */
+            width: 100%;
         }
 
         .nav-links a.active {
             color: var(--primary);
         }
 
-        /* Main Content Frame - Calibrated for the new track layout heights */
+        /* Main Content Frame */
         .page {
             display: none;
-            padding: 13.5rem 2rem 5rem 2rem; /* Keeps header entirely clear from body assets */
+            padding: 13.5rem 2rem 5rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
             width: 100%;
@@ -176,7 +175,7 @@
             text-align: center;
             color: var(--muted);
             max-width: 700px;
-            margin: 0 auto 2rem auto;
+            margin: 0 auto 1.5rem auto;
         }
 
         @keyframes pageFadeIn {
@@ -254,7 +253,7 @@
             border-radius: 10px;
             border: 1px solid #e5e7eb;
             transition: var(--transition);
-            text-align: center; /* Centered Feature Cards Content */
+            text-align: center;
         }
 
         .feature-card:hover {
@@ -272,8 +271,9 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
-            margin-top: 2.5rem;
-            justify-content: center; /* Centers cards horizontally if row isn't full */
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+            justify-content: center;
         }
 
         .product-card {
@@ -315,7 +315,7 @@
             margin-bottom: 1.2rem;
             color: #111111;
             font-size: 1.35rem;
-            text-align: center; /* Centered Product Category Titles */
+            text-align: center;
         }
 
         /* Estilos del Módulo Desplegable Avanzado (Dropdown Accordion) */
@@ -343,12 +343,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            list-style: none; /* Oculta flecha por defecto en Chrome/Firefox */
+            list-style: none;
             user-select: none;
         }
 
         .accordion-trigger::-webkit-details-marker {
-            display: none; /* Oculta flecha por defecto en Safari */
+            display: none;
         }
 
         .accordion-trigger:hover {
@@ -375,7 +375,7 @@
         .accordion-content {
             padding: 1.2rem;
             border-top: 1px solid #e5e7eb;
-            text-align: left; /* Keeps text readable inside dropdowns */
+            text-align: left;
             animation: slideDownContent 0.25s ease-out;
         }
 
@@ -416,7 +416,7 @@
             margin-top: auto;
             padding-top: 1rem;
             border-top: 1px dashed #e5e7eb;
-            text-align: center; /* Centered sizes section */
+            text-align: center;
         }
         
         .sizes-label {
@@ -437,7 +437,7 @@
             font-weight: 700;
             padding: 0.25rem 0.6rem;
             border-radius: 4px;
-            margin: 0 0.2rem; /* Even spacing on both sides */
+            margin: 0 0.2rem;
             border: 1px solid #e5e7eb;
             transition: var(--transition);
         }
@@ -447,28 +447,108 @@
             border-color: var(--primary);
             color: var(--primary);
         }
-        
+
         .banner-info {
             background-color: #fff3e0; 
             border-left: 4px solid var(--primary); 
-            border-right: 4px solid var(--primary); /* Balanced border styling */
-            padding: 1rem 1.5rem; 
-            margin: 0 auto 2.5rem auto; 
-            border-radius: 4px; 
-            font-size: 0.95rem;
-            max-width: 850px;
-            text-align: center; /* Centered informative banner */
+            border-right: 4px solid var(--primary);
+            padding: 0.85rem 1.25rem; 
+            margin: 0 auto 1.5rem auto; 
+            border-radius: 6px; 
+            font-size: 0.9rem;
+            max-width: 800px;
+            text-align: center;
+            color: var(--text-dark);
+        }
+
+        /* PACKAGING SHOWCASE GRID (AT BOTTOM OF PRODUCTS) */
+        .packaging-section {
+            margin: 2rem auto 1rem auto;
+            max-width: 950px;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .packaging-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.4rem;
+        }
+
+        .packaging-subtitle-text {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .packaging-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .packaging-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.25rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .packaging-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 20px rgba(230, 81, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .packaging-img-wrapper {
+            width: 100%;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .packaging-img-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .packaging-badge {
+            background-color: #fff3e0;
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            border: 1px solid rgba(230, 81, 0, 0.2);
+            margin-bottom: 0.3rem;
+        }
+
+        .packaging-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 500;
         }
 
         /* PAGE 3: ABOUT COMPONENTS */
         .about-section {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center; /* Centered About Section Elements */
+            text-align: center;
         }
 
         .about-section p {
-            text-align: justify; /* Keeps block text readable but balanced within the center layout */
+            text-align: justify;
             margin-bottom: 1.5rem;
         }
 
@@ -557,6 +637,7 @@
             .contact-container { grid-template-columns: 1fr; gap: 3rem; }
             .contact-info-block { text-align: center; }
             .grid { grid-template-columns: 1fr; }
+            .packaging-grid { grid-template-columns: 1fr; gap: 1rem; }
         }
     </style>
 </head>
@@ -629,11 +710,12 @@
         <h2>Nuestro Catálogo de Distribución</h2>
         <p class="page-subtitle">Explora nuestro portafolio completo de soluciones químicas avanzadas para operaciones industriales y mantenimiento comercial.</p>
         
-        <!-- Banner informativo superior centrado -->
+        <!-- Small discreet top note -->
         <div class="banner-info">
-            <strong>📦 Formatos de Suministro Industrial:</strong> Todo nuestro portafolio químico está disponible de manera estandarizada en presentaciones de alta capacidad: <strong>20 Litros</strong>, <strong>60 Litros</strong> y <strong>208 Litros</strong>.
+            <strong>💡 Nota:</strong> Todos nuestros productos están disponibles en formatos de <strong>20L</strong>, <strong>60L</strong> y <strong>208L</strong>. Puedes ver la galería de nuestros envases al final de esta sección.
         </div>
 
+        <!-- 1. PRODUCT MODULES FIRST -->
         <div class="grid">
             <!-- 1. SOLVENTES DIELECTRICOS -->
             <div class="product-card">
@@ -890,6 +972,36 @@
                 </div>
             </div>
         </div>
+
+        <!-- 2. PACKAGING SHOWCASE SECTION NOW PLACED AT THE BOTTOM -->
+        <div class="packaging-section">
+            <div class="packaging-title">📦 Presentaciones y Formatos de Envase</div>
+            <p class="packaging-subtitle-text">Garantizamos el suministro continuo de todo nuestro catálogo químico en tres presentaciones industriales estandarizadas:</p>
+            
+            <div class="packaging-grid">
+                <div class="packaging-card">
+                    <div class="packaging-img-wrapper">
+                        <img src="20l.png" alt="Envase de 20 Litros">
+                    </div>
+                    <span class="packaging-badge">20 Litros</span>
+                    <span class="packaging-desc">Cuñete / Paila Industrial</span>
+                </div>
+                <div class="packaging-card">
+                    <div class="packaging-img-wrapper">
+                        <img src="60l.png" alt="Envase de 60 Litros">
+                    </div>
+                    <span class="packaging-badge">60 Litros</span>
+                    <span class="packaging-desc">Tambor Mediano</span>
+                </div>
+                <div class="packaging-card">
+                    <div class="packaging-img-wrapper">
+                        <img src="208l.png" alt="Envase de 208 Litros">
+                    </div>
+                    <span class="packaging-badge">208 Litros</span>
+                    <span class="packaging-desc">Tambor Industrial Grande</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- PAGE 3: ABOUT VIEW -->
@@ -965,23 +1077,19 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 2. JavaScript API Form Handler (Option 3)
+        // 2. JavaScript API Form Handler
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            // Stops the browser from changing pages or reloading
             event.preventDefault(); 
             
             const form = event.target;
             const submitBtn = document.getElementById('submitBtn');
             
-            // Give visual feedback to the user while sending
             submitBtn.value = "Enviando...";
             submitBtn.disabled = true;
 
-            // Gather all input fields automatically
             const formData = new FormData(form);
             const formObject = Object.fromEntries(formData);
 
-            // Send data to FormSubmit's secret API endpoint via background fetch
             fetch("https://formsubmit.co/ajax/gabotennis98@gmail.com", {
                 method: "POST",
                 headers: { 
@@ -992,17 +1100,14 @@
             })
             .then(response => response.json())
             .then(data => {
-                // Success actions
                 alert("¡Solicitud de contacto enviada correctamente!");
-                form.reset(); // Wipes the fields clean for the next message
+                form.reset();
             })
             .catch(error => {
-                // Error protection
                 alert("Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.");
                 console.error("Submission Error:", error);
             })
             .finally(() => {
-                // Return button to its original design state
                 submitBtn.value = "Enviar Solicitud";
                 submitBtn.disabled = false;
             });
