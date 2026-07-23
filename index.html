@@ -365,9 +365,8 @@
         }
 
         .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            display: flex;
+            justify-content: center; /* Centramos el contenido de la grilla */
             margin-top: 2rem;
         }
 
@@ -379,16 +378,13 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
+            width: 100%;
+            max-width: 700px; /* Ancho máximo para que no se estire demasiado y se vea bien proporcionada */
         }
 
         .client-category-card:hover {
             border-color: var(--primary);
             box-shadow: 0 10px 25px rgba(0,0,0,0.04);
-        }
-
-        .client-category-card.highlight-card {
-            background: linear-gradient(180deg, #ffffff 0%, #fffbf8 100%);
-            border-left: 4px solid var(--primary);
         }
 
         .client-category-header {
@@ -433,39 +429,6 @@
             left: 0;
             color: var(--primary);
             font-weight: bold;
-        }
-
-        .client-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .client-tag {
-            background-color: #f3f4f6;
-            color: #374151;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            border: 1px solid #e5e7eb;
-            transition: var(--transition);
-        }
-
-        .client-category-card:hover .client-tag {
-            border-color: rgba(230, 81, 0, 0.3);
-            background-color: rgba(230, 81, 0, 0.04);
-            color: var(--primary);
-        }
-
-        .client-note {
-            font-size: 0.82rem !important;
-            color: var(--muted);
-            margin-top: auto;
-            margin-bottom: 0 !important;
-            padding-top: 0.75rem;
-            border-top: 1px dashed #e5e7eb;
         }
 
         /* PAGE 2: PRODUCTS COMPONENTS */
@@ -873,7 +836,6 @@
             .contact-info-block { text-align: center; }
             .grid { grid-template-columns: 1fr; }
             .packaging-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .clients-grid { grid-template-columns: 1fr; }
             .advisory-grid { grid-template-columns: 1fr; }
             .floating-whatsapp { width: 52px; height: 52px; bottom: 20px; right: 20px; }
         }
@@ -980,23 +942,6 @@
                         <li>Talleres Especializados y Flotas de Transporte Comercial</li>
                         <li>Instituciones, Hospitales y Plantas Procesadoras</li>
                     </ul>
-                </div>
-
-                <!-- Tarjeta 2: Clientes Históricos antes de su salida del país -->
-                <div class="client-category-card highlight-card">
-                    <div class="client-category-header">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                        <h3>Clientes Históricos y Multinacionales</h3>
-                    </div>
-                    <p>Durante nuestros años de trayectoria desde 2010, Disyuroca tuvo el honor de ser el proveedor confiable de destacadas empresas internacionales y grandes corporaciones antes de su cese o salida del país:</p>
-                    <div class="client-tags">
-                        <span class="client-tag">Ensambladoras Automotrices Multinacionales</span>
-                        <span class="client-tag">Corporaciones Globales de Manufactura</span>
-                        <span class="client-tag">Grandes Cadenas de Retail Internacional</span>
-                        <span class="client-tag">Empresas Multinacionales de Consumo Masivo</span>
-                        <span class="client-tag">Industrias de Alimentos y Bebidas Globales</span>
-                    </div>
-                    <p class="client-note">* Clientes e industrias atendidas satisfactoriamente por Disyuroca durante su presencia y periodo operativo en el territorio nacional.</p>
                 </div>
             </div>
         </div>
